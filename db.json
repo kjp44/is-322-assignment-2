@@ -1,0 +1,19 @@
+{
+  "to_do": [
+    { "id": "1", "title": "Create list view", "type": "feature" },
+    { "id": "1", "title": "Create add forum", "type": "feature" }
+  ],
+  "in_progress": [
+    { "id": "1", "title": "Install dependencies", "type": "task" },
+    { "id": "1", "title": "Create grid view", "type": "task" }
+  ],
+  "review": [
+    { "id": "1", "title": "Setup GitHub", "type": "task" },
+    { "id": "1", "title": "Create App component", "type": "feature" },
+    { "id": "1", "title": "Plan component diagram", "type": "task" }
+  ],
+  "done": [
+    { "id": "1", "title": "Install React", "type": "task" },
+    { "id": "1", "title": "Invite Collaborators", "type": "task" }
+  ]
+}
