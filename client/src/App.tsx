@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
-class App extends Component {
+class App extends Component<{}, {}> {
+  public state = {};
+  
   render() {
     return <div>APP</div>;
   }
