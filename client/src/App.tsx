@@ -1,10 +1,15 @@
 import React, { Component } from "react";
+import Dashboard from "./pages/Dashboard";
 
 class App extends Component<{}, {}> {
   public state = {};
-  
+
   render() {
-    return <div>APP</div>;
+    return (
+      <div>
+        <Dashboard />
+      </div>
+    );
   }
 }
 
