@@ -10,7 +10,6 @@ interface DashboardColumnProps {
 }
 export const DashboardColumn = (props: DashboardColumnProps) => {
   const renderTasks = (arr: any) => {
-    console.log("ARR", arr[0]);
     return arr[1].items.map((item: any) => {
       return (
         <Task

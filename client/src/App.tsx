@@ -1,7 +1,11 @@
 import React, { Component } from "react";
+
 import Dashboard from "./pages/Dashboard";
+import TaskForm from "./pages/TaskForm";
+
 import { TaskContext } from "./contexts";
 import { fetchFactory } from "./utilities/fetch";
+import { Route, Switch } from "react-router-dom";
 
 interface AppState {
   to_do: Array<object>;
@@ -38,9 +42,10 @@ class App extends Component<{}, AppState> {
             done
           }}
         >
-          <div>
-            <Dashboard />
-          </div>
+          <Switch>
+            <Route exact path="/" component={Dashboard} />
+            <Route path="/add_task" component={TaskForm} />
+          </Switch>
         </TaskContext.Provider>
       </React.Fragment>
     );
