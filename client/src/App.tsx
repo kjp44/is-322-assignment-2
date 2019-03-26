@@ -1,14 +1,39 @@
 import React, { Component } from "react";
 import Dashboard from "./pages/Dashboard";
+import { TaskContext } from "./contexts";
 
-class App extends Component<{}, {}> {
-  public state = {};
+interface AppState {
+  to_do: Array<object>;
+}
+
+class App extends Component<{}, AppState> {
+  public state = { to_do: [] };
+
+  async componentDidMount() {
+    const response = await fetch("http://localhost:3000/to_do", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+
+    const result = await response.json();
+
+    this.setState({ to_do: result });
+  }
 
   render() {
+    const { to_do } = this.state;
     return (
-      <div>
-        <Dashboard />
-      </div>
+      <TaskContext.Provider
+        value={{
+          to_do
+        }}
+      >
+        <div>
+          <Dashboard />
+        </div>
+      </TaskContext.Provider>
     );
   }
 }

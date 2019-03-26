@@ -1,21 +1,31 @@
 import React from "react";
-import {Task} from "./task";
+import { Task } from "./task";
 
 interface DashboardColumnProps {
   title: string;
   taskTitle?: string;
   taskType?: string;
-  id?: number;
+  taskId?: number;
+  tasks?: Array<object>;
 }
 export const DashboardColumn = (props: DashboardColumnProps) => {
+  const renderTasks = (arr: any) => {
+    return arr.map((item: any, index: number) => {
+      return (
+        <Task
+          key={item.id}
+          taskTitle={item.title}
+          taskType={item.type}
+          taskId={item.id}
+        />
+      );
+    });
+  };
+  console.log(props);
   return (
     <div className="col-md-3 border h-100">
       <h2 className="m-3">{props.title}</h2>
-      {props.taskTitle ? (
-        <div>Exists!</div>
-      ) : (
-        <div className="mx-3"><Task/></div>
-      )}
+      <div>{renderTasks(props.tasks)}</div>
     </div>
   );
 };
