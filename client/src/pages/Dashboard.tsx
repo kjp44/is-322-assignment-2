@@ -8,9 +8,14 @@ class Dashboard extends Component<{}, {}> {
       <TaskContext.Consumer>
         {value => {
           return value ? (
-            <div>
-              This is Dashboard
+            <div className="row d-flex m-0 justify-content-center">
               <DashboardColumn title={"To Do"} tasks={value.to_do} />
+              <DashboardColumn
+                title={"In Progress"}
+                tasks={value.in_progress}
+              />
+              <DashboardColumn title={"Review"} tasks={value.review} />
+              <DashboardColumn title={"Done"} tasks={value.done} />
             </div>
           ) : (
             <div>Loading...</div>

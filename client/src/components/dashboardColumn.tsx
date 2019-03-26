@@ -6,26 +6,27 @@ interface DashboardColumnProps {
   taskTitle?: string;
   taskType?: string;
   taskId?: number;
-  tasks?: Array<object>;
+  tasks?: any;
 }
 export const DashboardColumn = (props: DashboardColumnProps) => {
   const renderTasks = (arr: any) => {
-    return arr.map((item: any, index: number) => {
+    console.log("ARR", arr[0]);
+    return arr[1].items.map((item: any) => {
       return (
         <Task
           key={item.id}
           taskTitle={item.title}
           taskType={item.type}
           taskId={item.id}
+          links={arr[0].linkNames}
         />
       );
     });
   };
-  console.log(props);
-  return (
-    <div className="col-md-3 border h-100">
-      <h2 className="m-3">{props.title}</h2>
+  return props.tasks.length ? (
+    <div className="col-11 col-sm-6 col-md-4 col-lg-2 border h-100 m-1">
+      <h2 className="mt-2">{props.title}</h2>
       <div>{renderTasks(props.tasks)}</div>
     </div>
-  );
+  ) : null;
 };
