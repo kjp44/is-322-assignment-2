@@ -24,7 +24,6 @@ export class TaskForm extends React.Component<FormProps, FormState> {
 
   handleSubmit(e: any) {
     e.preventDefault();
-    
   }
  
 
