@@ -1,38 +1,92 @@
 {
   "to_do": [
-    { "linkNames": ["Start work"] },
+    {
+      "linkNames": [
+        "Start work"
+      ]
+    },
     {
       "items": [
-        { "id": "1", "title": "Create list view", "type": "feature" },
-        { "id": "2", "title": "Create add forum", "type": "feature" }
+        {
+          "id": "1",
+          "title": "Create list view",
+          "type": "feature"
+        },
+        {
+          "id": "2",
+          "title": "Create add forum",
+          "type": "feature"
+        }
       ]
     }
   ],
   "in_progress": [
-    { "linkNames": ["Send back", "Request review"] },
+    {
+      "linkNames": [
+        "Send back",
+        "Request review"
+      ]
+    },
     {
       "items": [
-        { "id": "3", "title": "Install dependencies", "type": "task" },
-        { "id": "4", "title": "Create grid view", "type": "task" }
+        {
+          "id": "3",
+          "title": "Install dependencies",
+          "type": "task"
+        },
+        {
+          "id": "4",
+          "title": "Create grid view",
+          "type": "task"
+        }
       ]
     }
   ],
   "review": [
-    { "linkNames": ["More work required", "Mark done"] },
+    {
+      "linkNames": [
+        "More work required",
+        "Mark done"
+      ]
+    },
     {
       "items": [
-        { "id": "5", "title": "Setup GitHub", "type": "task" },
-        { "id": "6", "title": "Create App component", "type": "feature" },
-        { "id": "7", "title": "Plan component diagram", "type": "task" }
+        {
+          "id": "5",
+          "title": "Setup GitHub",
+          "type": "task"
+        },
+        {
+          "id": "6",
+          "title": "Create App component",
+          "type": "feature"
+        },
+        {
+          "id": "7",
+          "title": "Plan component diagram",
+          "type": "task"
+        }
       ]
     }
   ],
   "done": [
-    { "linkNames": ["Request re-request"] },
+    {
+      "linkNames": [
+        "Request re-request"
+      ]
+    },
     {
       "items": [
-        { "id": "8", "title": "Install React", "type": "task" },
-        { "id": "9", "title": "Invite Collaborators", "type": "task" }
+        {
+          "id": "8",
+          "title": "Install React",
+          "type": "task"
+        },
+        {
+          "id": "9",
+          "title": "Invite Collaborators",
+          "type": "task"
+        }
       ]
     }
   ]
