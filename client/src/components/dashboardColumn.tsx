@@ -8,6 +8,7 @@ interface DashboardColumnProps {
   taskId?: number;
   tasks?: any;
 }
+
 export const DashboardColumn = (props: DashboardColumnProps) => {
   const renderTasks = (arr: any) => {
     return arr[1].items.map((item: any) => {
