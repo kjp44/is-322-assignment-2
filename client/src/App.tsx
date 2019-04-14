@@ -15,7 +15,12 @@ interface AppState {
 }
 
 class App extends Component<{}, AppState> {
-  public state = { to_do: [], in_progress: [], review: [], done: [] };
+  public state = {
+    to_do: [],
+    in_progress: [],
+    review: [],
+    done: []
+  };
 
   async componentDidMount() {
     const to_do = await fetchFactory("http://localhost:3000/to_do");
@@ -23,14 +28,25 @@ class App extends Component<{}, AppState> {
     const review = await fetchFactory("http://localhost:3000/review");
     const done = await fetchFactory("http://localhost:3000/done");
 
-    this.setState({ to_do });
-    this.setState({ in_progress });
-    this.setState({ review });
-    this.setState({ done });
+    this.setState({ in_progress, review, done, to_do });
+  }
+
+  updateListState(type: string, newItem: object) {
+    switch (type) {
+      case "to_do":
+        this.setState({ to_do: [...this.state.to_do, newItem] });
+      case "in_progress":
+        this.setState({ in_progress: [...this.state.in_progress, newItem] });
+      case "review":
+        this.setState({ review: [...this.state.review, newItem] });
+      case "done":
+        this.setState({ done: [...this.state.done, newItem] });
+    }
   }
 
   render() {
     const { to_do, in_progress, review, done } = this.state;
+    const { updateListState } = this;
     return (
       <React.Fragment>
         <h3 className="m-3 border-bottom border-dark">Task Board</h3>
@@ -39,7 +55,8 @@ class App extends Component<{}, AppState> {
             to_do,
             in_progress,
             review,
-            done
+            done,
+            updateListState: updateListState.bind(this)
           }}
         >
           <Switch>
