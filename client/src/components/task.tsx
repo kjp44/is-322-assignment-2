@@ -8,7 +8,7 @@ interface TaskProps {
 }
 
 export const Task = (props: TaskProps) => {
-  const renderLiks = (arr: string[]) => {
+  const renderLinks = (arr: string[]) => {
     return arr.map((item: string, index: number) => {
       return (
         <button key={index} className="btn btn-info m-2">
@@ -22,7 +22,7 @@ export const Task = (props: TaskProps) => {
       <h4>{props.taskTitle}</h4>
       <div className="mb-2">ID: {props.taskId}</div>
       <div className="mb-2">Type: {props.taskType}</div>
-      {renderLiks(props.links)}
+      {renderLinks(props.links)}
     </div>
   );
 };
