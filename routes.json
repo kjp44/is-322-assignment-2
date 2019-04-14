@@ -1,0 +1,6 @@
+{
+  "/to_do/items": "/items=:obj",
+  "/in_progress/items": "/items=:obj",
+  "/review/items": "/items=:obj",
+  "/done/items": "/items=:obj"
+}
