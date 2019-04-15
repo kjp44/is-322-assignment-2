@@ -35,12 +35,16 @@ class App extends Component<{}, AppState> {
     switch (type) {
       case "to_do":
         this.setState({ to_do: [...this.state.to_do, newItem] });
+        break;
       case "in_progress":
         this.setState({ in_progress: [...this.state.in_progress, newItem] });
+        break;
       case "review":
         this.setState({ review: [...this.state.review, newItem] });
+        break;
       case "done":
         this.setState({ done: [...this.state.done, newItem] });
+        break;
     }
   }
 

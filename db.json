@@ -1,9 +1,7 @@
 {
   "to_do": [
     {
-      "linkNames": [
-        "Start work"
-      ]
+      "linkNames": ["Start work"]
     },
     {
       "id": 1,
@@ -18,10 +16,7 @@
   ],
   "in_progress": [
     {
-      "linkNames": [
-        "Send back",
-        "Request review"
-      ]
+      "linkNames": ["Send back", "Request review"]
     },
     {
       "id": 3,
@@ -36,10 +31,7 @@
   ],
   "review": [
     {
-      "linkNames": [
-        "More work required",
-        "Mark done"
-      ]
+      "linkNames": ["More work required", "Mark done"]
     },
     {
       "id": 5,
@@ -59,9 +51,7 @@
   ],
   "done": [
     {
-      "linkNames": [
-        "Request re-request"
-      ]
+      "linkNames": ["Request re-request"]
     },
     {
       "id": 8,
